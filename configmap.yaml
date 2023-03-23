@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hazelcast-jet-configuration
+data:
+  hazelcast.yaml: |-
+    hazelcast:
+      cluster-name: jet
+      network:
+        join:
+          multicast:
+            enabled: false
+          kubernetes:
+            enabled: false
+            service-dns: 10.96.0.10
+        rest-api:
+          enabled: true
+          endpoint-groups:
+            HEALTH_CHECK:
+              enabled: true

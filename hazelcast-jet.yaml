@@ -5,7 +5,7 @@ metadata:
   labels:
     app: hazelcast-jet
 spec:
-  replicas: 1
+  replicas: 2
   serviceName: hazelcast-jet-service
   selector:
     matchLabels:

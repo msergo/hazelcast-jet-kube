@@ -8,6 +8,10 @@ data:
       cluster-name: jet
       network:
         join:
+          tcp-ip:
+            enabled: true
+            member-list:
+              - 10.244.16.171
           multicast:
             enabled: false
           kubernetes:
